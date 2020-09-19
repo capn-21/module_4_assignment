@@ -20,6 +20,7 @@
     <script src="routes/routes.js"></script>
     <script src="templates/home.template.html"></script>
     <script src="templates/categories.component.html"></script>
+    <script src="templates/categories.template.html"></script>
     <script src="templates/items.component.html"></script>
     <script src="templates/items.template.html"></script>
    <style>
@@ -68,7 +69,6 @@
     margin: 3px 1px;
     cursor: pointer;
   }
-
    .btrr {
     background-color: rgb(67, 226, 52);
     border: none;
@@ -110,19 +110,14 @@
 
   }
     </style>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  
 </head>
 
 <body class="bod">
     <div class="container">
         <div class="header clearfix">
 
-            <h1><b><u> Menu App:</u></b></h1>
+            <h1><b><u> Menu App</u></b></h1>
          
         </div>
         <nav>
@@ -133,12 +128,7 @@
         </nav>
         <ui-view></ui-view>
     </div>
-    <div>
-        <button class="butt" ng-repeat="category in $ctrl.categories" class="btrr" ui-sref="items({categoryShortName: category.short_name, categoryName:category.name})">
-            {{category.name}}   
-        </button>
-    </div>
-    
+  
 </body>
 
 </html>
